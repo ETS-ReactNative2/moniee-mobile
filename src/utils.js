@@ -10,7 +10,7 @@ export const colors = {
   light_gray: "#AAB8C2",
   exlight_gray: "#E1E8ED",
   exexlight_gray: "#F5F8FA",
-  white: "#FFF"
+  white: "#FFFFFF"
 };
 
 export const drawerOptionList = [

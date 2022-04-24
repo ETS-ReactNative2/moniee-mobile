@@ -70,16 +70,8 @@ function TabNav() {
           tabBarShowLabel: false,
           // Floating Tab Bar...
           tabBarStyle: {
-            // width: 130,
-            // flex: 0.3,
-            backgroundColor: "#fff",
+            backgroundColor: "transparent",
             position: "absolute",
-            // bottom: -60,
-            // bottom: 0,
-            // marginHorizontal: 20,
-            // width: '100%',
-            // Max Height...
-            // height: 70,
             borderRadius: 20,
             // Shadow...
             shadowColor: "#000",
@@ -105,202 +97,6 @@ function TabNav() {
           // Tab ICons....
         }
         <Tab.Screen
-          name={screenNames.home}
-          component={HomeScreen}
-          options={{
-            // headerShown: false,
-            headerTitle: () => (
-              <Image
-                style={{
-                  alignSelf: 'center',
-                  width: 25,
-                  height: 25,
-                }}
-                source={ require("../../assets/wabbling-logo.png")}
-              />
-            ),
-            headerLeft: () => (
-              <TouchableOpacity
-                onPress={() => alert('Left Menu Clicked')}
-                style={{marginLeft: 30}}>
-                <Image
-                  style={{
-                    alignSelf: 'center',
-                    width: 30,
-                    height: 30,
-                    borderRadius: 50,
-                  }}
-                  source={ require("../../assets/avatar.png")}
-                />
-              </TouchableOpacity>
-            ),
-            headerRight: () => (
-              <TouchableOpacity
-                onPress={() => alert('Right Menu Clicked')}
-                style={{marginRight: 30}}>
-                <Image
-                  style={{
-                    alignSelf: 'center',
-                    width: 25,
-                    height: 25,
-                  }}
-                  source={ require("../../assets/wabble-spaces-icon.png")}
-                />
-              </TouchableOpacity>
-            ),
-            headerStyle: {height: 100, },
-            
-            tabBarIcon: ({ focused }) => (
-              <View
-                style={{
-                  // centring Tab Button...
-                  position: "absolute",
-                  top: 20,
-                }}
-              >
-                <FontAwesome5
-                  name="home"
-                  size={20}
-                  color={focused ? "#8e7aea" : "gray"}
-                ></FontAwesome5>
-              </View>
-            ),
-          }}
-          listeners={({ navigation, route }) => ({
-            // Onpress Update....
-            tabPress: (e) => {
-              Animated.spring(tabOffsetValue, {
-                toValue: 0,
-                useNativeDriver: true,
-              }).start();
-            },
-          })}
-        ></Tab.Screen>
-
-        <Tab.Screen
-          name={screenNames.search}
-          component={SearchScreen}
-          options={{
-            // headerShown: false,
-            headerTitle: () => (
-              <SearchBar />
-              // <Image
-              //   style={{
-              //     alignSelf: 'center',
-              //     width: 25,
-              //     height: 25,
-              //   }}
-              //   source={ require("../../assets/wabbling-logo.png")}
-              // />
-              
-            ),
-            headerLeft: () => (
-              <TouchableOpacity
-                onPress={() => alert('Left Menu Clicked')}
-                style={{marginLeft: 30}}>
-                {/* <Text style={{color: 'black'}}>Left Menu</Text> */}
-                <Image
-                  style={{
-                    alignSelf: 'center',
-                    width: 30,
-                    height: 30,
-                    borderRadius: 50,
-                  }}
-                  source={ require("../../assets/avatar.png")}
-                />
-              </TouchableOpacity>
-            ),
-            headerRight: () => (
-              <TouchableOpacity
-                onPress={() => alert('Right Menu Clicked')}
-                style={{marginRight: 30}}>
-                <Text style={{color: 'black'}}><Ionicons
-                  name="cog"
-                  size={25}
-                  color={"#8e7aea"}
-                /></Text>
-                {/* <Image
-                  style={{
-                    alignSelf: 'center',
-                    width: 25,
-                    height: 25,
-                  }}
-                  source={ require("../../assets/wabble-spaces-icon.png")}
-                /> */}
-                
-              </TouchableOpacity>
-            ),
-            headerStyle: {height: 100, },
-            tabBarIcon: ({ focused }) => (
-              <View
-                style={{
-                  // centring Tab Button...
-                  position: "absolute",
-                  top: 20,
-                }}
-              >
-                <FontAwesome5
-                  name="search"
-                  size={20}
-                  color={focused ? "#8e7aea" : "gray"}
-                ></FontAwesome5>
-              </View>
-            ),
-          }}
-          listeners={({ navigation, route }) => ({
-            // Onpress Update....
-            tabPress: (e) => {
-              Animated.spring(tabOffsetValue, {
-                toValue: getWidth() * 2/1.9,
-                useNativeDriver: true,
-              }).start();
-            },
-          })}
-        ></Tab.Screen>
-
-        {
-          // Extra Tab Screen For Action Button..
-        }
-
-        <Tab.Screen
-          name={screenNames.spaces}
-          component={SpacesScreen}
-          options={{
-            headerShown: false,
-            tabBarIcon: ({ focused }) => (
-              <TouchableOpacity>
-                <View
-                  style={{
-                    width: 70,
-                    height: 70,
-                    backgroundColor: "#8e7aea",
-                    borderRadius: 45,
-                    borderLine: "none",
-                    borderWidth: 5,
-                    // borderStyle: "solid",
-                    borderColor: "#f8f8f8",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    marginBottom: Platform.OS == "android" ? 50 : 40,
-                  }}
-                >
-                  {/* <Image source={plus} style={{
-                  width: 20,
-                  height: 20,
-                  tintColor: 'white',
-                }}></Image> */}
-                  <FontAwesome5
-                    name="rocket"
-                    size={20}
-                    color={focused ? "#8e7aea" : "white"}
-                  ></FontAwesome5>
-                </View>
-              </TouchableOpacity>
-            ),
-          }}
-        ></Tab.Screen>
-
-        {/* <Tab.Screen
           name={screenNames.notification}
           component={NotificationScreen}
           options={{
@@ -330,9 +126,128 @@ function TabNav() {
               }).start();
             },
           })}
-        ></Tab.Screen> */}
+        ></Tab.Screen>
 
         <Tab.Screen
+          name={screenNames.home}
+          component={HomeScreen}
+          options={{
+            // headerShown: false,
+            headerTitleStyle: {color: '#ffffff'},
+            // headerTitle: () => (
+            //   <Image
+            //     style={{
+            //       alignSelf: 'center',
+            //       width: 25,
+            //       height: 25,
+            //     }}
+            //     source={ require("../../assets/wabbling-logo.png")}
+            //   />
+            // ),
+            // headerStyle: {backgroundColor: 'red'},
+            headerLeft: () => (
+              <TouchableOpacity
+                onPress={() => alert('Left Menu Clicked')}
+                style={{marginLeft: 30}}>
+                <Image
+                  style={{
+                    alignSelf: 'center',
+                    width: 30,
+                    height: 30,
+                    // borderRadius: 50,
+                  }}
+                  source={ require("../assets/icon/barcode-scanner.png")}
+                />
+              </TouchableOpacity>
+            ),
+            headerRight: () => (
+              <TouchableOpacity
+                onPress={() => alert('Right Menu Clicked')}
+                style={{marginRight: 30}}>
+                <Image
+                  style={{
+                    alignSelf: 'center',
+                    width: 30,
+                    height: 30,
+                  }}
+                  source={ require("../assets/icon/clock.png")}
+                />
+              </TouchableOpacity>
+            ),
+            headerStyle: {height: 100, shadowColor: 'transparent' },
+            
+            tabBarIcon: ({ focused }) => (
+              <View
+                style={{
+                  // centring Tab Button...
+                  position: "absolute",
+                  top: 20,
+                }}
+              >
+                <FontAwesome5
+                  name="th-large"
+                  size={20}
+                  color={focused ? "#333333" : "gray"}
+                ></FontAwesome5>
+              </View>
+            ),
+          }}
+          listeners={({ navigation, route }) => ({
+            // Onpress Update....
+            tabPress: (e) => {
+              Animated.spring(tabOffsetValue, {
+                toValue: 0,
+                useNativeDriver: true,
+              }).start();
+            },
+          })}
+        ></Tab.Screen>
+
+        {
+          // Extra Tab Screen For Action Button..
+        }
+
+        {/* <Tab.Screen
+          name={screenNames.spaces}
+          component={SpacesScreen}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused }) => (
+              <TouchableOpacity>
+                <View
+                  style={{
+                    width: 70,
+                    height: 70,
+                    backgroundColor: "#8e7aea",
+                    borderRadius: 45,
+                    borderLine: "none",
+                    borderWidth: 5,
+                    // borderStyle: "solid",
+                    borderColor: "#f8f8f8",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginBottom: Platform.OS == "android" ? 50 : 40,
+                  }}
+                >
+                  {/* <Image source={plus} style={{
+                  width: 20,
+                  height: 20,
+                  tintColor: 'white',
+                }}></Image> */}
+                  {/* <FontAwesome5
+                    name="rocket"
+                    size={20}
+                    color={focused ? "#8e7aea" : "white"}
+                  ></FontAwesome5>
+                </View>
+              </TouchableOpacity>
+            ),
+          }}
+        ></Tab.Screen> */}
+
+        
+
+        {/* <Tab.Screen
           name={screenNames.notification}
           component={NotificationScreen}
           options={{
@@ -362,7 +277,7 @@ function TabNav() {
               }).start();
             },
           })}
-        ></Tab.Screen>
+        ></Tab.Screen> */}
 
         <Tab.Screen
           name={screenNames.message}
@@ -378,7 +293,7 @@ function TabNav() {
                 }}
               >
                 <FontAwesome5
-                  name="envelope"
+                  name="user"
                   size={20}
                   color={focused ? "#8e7aea" : "gray"}
                 ></FontAwesome5>
@@ -399,7 +314,7 @@ function TabNav() {
         
       </Tab.Navigator>
       <Animated.View
-        style={{
+        stylex={{
           width: getWidth() - 20,
           height: 2,
           backgroundColor: "#8e7aea",

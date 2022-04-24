@@ -9,7 +9,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import TextInput from "../components/TextInput";
 import Icon from "react-native-vector-icons/Feather"
 
-const Keypad = ({ onPress, navigation }) => {
+const KeypadAmount = ({ onPress, navigation }) => {
   const numbers = [
     [1, 2, 3],
     [4, 5, 6],
@@ -29,7 +29,7 @@ const Keypad = ({ onPress, navigation }) => {
         <View
           style={{
             // marginTop: -20,
-            bottom: 60,
+            bottom: 80,
             // position: 'absolute'
           }}>
             <View
@@ -37,13 +37,32 @@ const Keypad = ({ onPress, navigation }) => {
                 alignSelf: 'center',
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: '#fafafa', 
-                width: '50%',
-                // paddingVertical: 5,
+                // backgroundColor: '#fafafa', 
+                // width: '40%',
+                paddingVertical: 20,
                 borderRadius: 20,
+                // borderColor: '#f2f2f2',
+                // borderWidth: '1',
                 color: '#fafafa'
               }}>
-              <Text style={{color: '#828282', fontSize: 35}}>• • • •</Text>
+              <Text style={{color: '#0c0c26', fontSize: 45, fontWeight: 'bold', alignItems: 'center', textAlign: 'center', alignContent: 'center', alignSelf: 'center'}}> <Text style={{fontSize: 20, fontWeight: 'bold', color: '#0c0c26', fontSize: 20 }}>NGN</Text> 0 </Text>
+              {/* <Text style={{color: '#0c0c26', fontSize: 45, fontWeight: 'bold'}}><Image source={require('../assets/icon/₦.png')} style={{width: 10, height: 15, marginTop: 20}} />NGN 0</Text> */}
+            </View>
+            <View
+              style={{
+                alignSelf: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: '#fafafa', 
+                width: '40%',
+                paddingVertical: 20,
+                borderRadius: 20,
+                borderColor: '#f2f2f2',
+                borderWidth: '1',
+                color: '#fafafa'
+              }}>
+              <Text style={{color: '#828282', fontSize: 15, marginBottom: 5}}>Wallet Balance</Text>
+              <Text style={{color: '#0c0c26', fontSize: 25, fontWeight: '600', fontStyle: 'italic'}}>5,200</Text>
             </View>
           {numbers.map((chunk, index) => {
             return (
@@ -94,7 +113,7 @@ const Keypad = ({ onPress, navigation }) => {
   );
 };
 
-Keypad.navigationOptions = () => {
+KeypadAmount.navigationOptions = () => {
   return {
     headerShown: false,
   };
@@ -163,8 +182,9 @@ const styles = StyleSheet.create({
   keypadWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginVertical: 35,
-    top: 60,
+    marginVertical: 30,
+    top: 20,
+    paddingHorizontal: 10,
     // position: 'absolute',
   },
   keypadText: {
@@ -181,4 +201,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Keypad;
+export default KeypadAmount;

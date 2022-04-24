@@ -35,7 +35,16 @@ const EnterPINScreen = ({ onPress, navigation }) => {
         </View>
       </SafeAreaView>
       
-      <Keypad/>
+      {/* <View> */}
+        <Keypad/>
+      {/* </View> */}
+      <TouchableOpacity
+        style={styles.buttonStyle}
+        onPress={() => navigation.navigate("auth", { screen: "HomeScreen" })}
+        // onPress={() => navigation.navigate("HomeScreen")}
+      >
+        <Text style={styles.loginButtonStyle}> Continue </Text>
+      </TouchableOpacity>
       {/* <Transfer/> */}
       </View>
   );
@@ -78,11 +87,11 @@ const styles = StyleSheet.create({
     // backgroundColor: '#00b14f',
     backgroundColor: '#000000',
     paddingHorizontal: 100,
-    bottom: 40,
+    bottom: 25,
     position: 'absolute',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 17,
+    paddingVertical: 20,
     borderRadius: 10,
     // marginTop: 10,
     width: '90%',

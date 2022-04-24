@@ -8,28 +8,28 @@ Splash Screen               |  Onboarding Screen               | Login Screen
 
 OTP Screen                |  Home Screen              | Request Screen               
 :-------------------------:|:-------------------------:|:-------------------------:
-![](https://raw.githubusercontent.com/superbahbi/twitter-clone-app/master/screenshot/115988598_309720366844413_4416993421688434740_n.jpg?raw=true)|![](https://raw.githubusercontent.com/superbahbi/twitter-clone-app/master/screenshot/114181028_936039446910099_2573038851135952235_n.jpg?raw=true)|![](https://raw.githubusercontent.com/superbahbi/twitter-clone-app/master/screenshot/115931867_707227593169453_3823798036683035269_n.jpg?raw=true)|
+![](https://raw.githubusercontent.com/fissy/moniee-mobile/master/screenshot/otp_screen.png)|![](https://raw.githubusercontent.com/fissy/moniee-mobile/master/screenshot/home_screen.png)|![](https://raw.githubusercontent.com/fissy/moniee-mobile/master/screenshot/request_screen.png)|
          
 
 ## Installation
 To work with this project locally, first install all dependecies:
 1. Clone the repo
 ```sh
-git clone https://github.com/superbahbi/twitter-clone-app.git
+git clone https://github.com/fissy/moniee-mobile.git
+
 ```
-2. Install NPM packages
+2. Install Yarn packages
 ```sh
-npm install 
+yarn install 
 ```
 3. Start the application 
 ```sh
-npm start 
+yarn start 
 ```
-Note: you need to run the backend server with this application Project Link: [https://github.com/superbahbi/twitter-clone-server](https://github.com/superbahbi/twitter-clone-server)
 
 ## Roadmap
 
-See the [open issues](https://github.com/superbahbi/twitter-clone-app/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/fissy/moniee-mobile/issues) for a list of proposed features (and known issues).
 
 ## License
 
@@ -37,7 +37,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Bahbi Lee - [@bahbilee](https://twitter.com/bahbilee) - superbahbi@gmail.com
+Ayodeji Moshood - [@fissycoolz](https://twitter.com/fissycoolz) - amoshood@fczmedia.com
 
-Project Link: [https://github.com/superbahbi/twitter-clone-app](https://github.com/superbahbi/twitter-clone-app)
+Project Link: [https://github.com/fissy/moniee-mobile](https://github.com/fissy/moniee-mobile)
 # moniee-mobile

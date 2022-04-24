@@ -4,7 +4,7 @@ A Moniee Mobile App written in React native
 
 Splash Screen               |  Onboarding Screen               | Login Screen              
 :-------------------------:|:-------------------------:|:-------------------------:
-![](https://raw.githubusercontent.com/superbahbi/twitter-clone-app/master/screenshot/113791807_630449290925042_6338634424867943729_n.jpg?raw=true)|![](https://raw.githubusercontent.com/superbahbi/twitter-clone-app/master/screenshot/116058422_717934542103005_8605791401573559834_n.jpg?raw=true)|![](https://raw.githubusercontent.com/superbahbi/twitter-clone-app/master/screenshot/116262366_614420359233701_7517466630010855669_n.jpg?raw=true)|
+![](https://raw.githubusercontent.com/fissy/moniee-mobile/master/screenshot/splash_screen.png)|![](https://raw.githubusercontent.com/fissy/moniee-mobile/master/screenshot/onboarding_screen.png)|![](https://raw.githubusercontent.com/fissy/moniee-mobile/master/screenshot/login_screen.png)|
 
 OTP Screen                |  Home Screen              | Request Screen               
 :-------------------------:|:-------------------------:|:-------------------------:

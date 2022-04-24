@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Moniee",
+    "slug": "moniee-app",
+    "platforms": ["ios", "android", "web"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/paw-solid-white-64.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "bundleIdentifier": "com.fissy.moniee",
+      "buildNumber": "1.0.0",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.fissy.moniee",
+      "versionCode": 1,
+      "useNextNotificationsApi": true
+    }
+  }
+}

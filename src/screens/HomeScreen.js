@@ -40,14 +40,14 @@ const HomeScreen = ({ onPress, navigation }) => {
       <View style={{flexDirection: 'row', paddingHorizontal: 10, width: '75%', alignSelf: 'center', bottom: 15}}>
         <TouchableOpacity
           style={styles.buttonRequestStyle}
-          onPress={() => navigation.navigate("auth", { screen: "HomeScreen" })}
+          onPress={() => navigation.navigate("auth", { screen: "RequestMoneyScreen" })}
           // onPress={() => navigation.navigate("HomeScreen")}
         >
           <Text style={styles.buttonTextStyle}> Request </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonSendStyle}
-          onPress={() => navigation.navigate("auth", { screen: "HomeScreen" })}
+          onPress={() => navigation.navigate( "SendMoneyScreen" )}
           // onPress={() => navigation.navigate("HomeScreen")}
         >
           <Text style={styles.buttonTextStyle}> Send </Text>

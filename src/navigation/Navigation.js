@@ -28,11 +28,14 @@ import AddBankDetailsScreen from "../screens/AddBankDetailsScreen";
 import SetPINScreen from "../screens/SetPINScreen";
 import LoginScreen from "../screens/LoginScreen";
 import RegisterScreen from "../screens/RegisterScreen";
+import RequestMoneyScreen from "../screens/RequestMoneyScreen";
+import SendMoneyScreen from "../screens/SendMoneyScreen";
 import HomeScreen from "../screens/HomeScreen";
-import SearchScreen from "../screens/SearchScreen";
-import SpacesScreen from "../screens/SpacesScreen";
-import NotificationScreen from "../screens/NotificationScreen";
-import MessageScreen from "../screens/MessageScreen";
+// import SearchScreen from "../screens/SearchScreen";
+// import SpacesScreen from "../screens/SpacesScreen";
+// import NotificationScreen from "../screens/NotificationScreen";
+import ProfileScreen from "../screens/ProfileScreen";
+import LandingScreen from "../screens/LandingScreen";
 // end of app screens import
 
 // component import
@@ -52,10 +55,13 @@ export const screenNames = {
   login: "LoginScreen",
   register: "RegisterScreen",
   home: "HomeScreen",
+  requestmoney: "RequestMoneyScreen",
+  sendmoney: "SendMoneyScreen",
   search: "SearchScreen",
   spaces: "SpacesScreen",
   notification: "NotificationScreen",
-  message: "MessageScreen",
+  profile: "ProfileScreen",
+  landing: "LandingScreen"
 };
 
 function TabNav() {
@@ -97,8 +103,8 @@ function TabNav() {
           // Tab ICons....
         }
         <Tab.Screen
-          name={screenNames.notification}
-          component={NotificationScreen}
+          name={screenNames.landing}
+          component={LandingScreen}
           options={{
             headerShown: false,
             tabBarIcon: ({ focused }) => (
@@ -112,7 +118,7 @@ function TabNav() {
                 <FontAwesome5
                   name="home"
                   size={20}
-                  color={focused ? "#8e7aea" : "#e0e0e0"}
+                  color={focused ? "#333333" : "#e0e0e0"}
                 ></FontAwesome5>
               </View>
             ),
@@ -248,8 +254,8 @@ function TabNav() {
         
 
         {/* <Tab.Screen
-          name={screenNames.notification}
-          component={NotificationScreen}
+          name={screenNames.landing}
+          component={LandingScreen}
           options={{
             headerShown: false,
             tabBarIcon: ({ focused }) => (
@@ -280,8 +286,8 @@ function TabNav() {
         ></Tab.Screen> */}
 
         <Tab.Screen
-          name={screenNames.message}
-          component={MessageScreen}
+          name={screenNames.profile}
+          component={ProfileScreen}
           options={{
             headerShown: false,
             tabBarIcon: ({ focused }) => (
@@ -295,7 +301,7 @@ function TabNav() {
                 <FontAwesome5
                   name="user"
                   size={20}
-                  color={focused ? "#8e7aea" : "#e0e0e0"}
+                  color={focused ? "#333333" : "#e0e0e0"}
                 ></FontAwesome5>
               </View>
             ),
@@ -349,7 +355,8 @@ export default function Navigation() {
         <Stack.Screen name={screenNames.addbankdetails} component={AddBankDetailsScreen} />
         <Stack.Screen name={screenNames.setpin} component={SetPINScreen} />
         <Stack.Screen name={screenNames.register} component={RegisterScreen} />
-        {/* <Stack.Screen name={screenNames.map} component={MapScreen} /> */}
+        {/* <Stack.Screen name={screenNames.requestmoney} component={RequestMoneyScreen} />
+        <Stack.Screen name={screenNames.sendmoney} component={SendMoneyScreen} /> */}
         {/* <Stack.Screen name={screenNames.profile} component={ProfileSettingsScreen} /> */}
         {/* <Stack.Screen name={screenNames.dispatch} component={DispatchScreen} /> */}
 

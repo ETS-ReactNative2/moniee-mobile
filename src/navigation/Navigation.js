@@ -110,9 +110,9 @@ function TabNav() {
                 }}
               >
                 <FontAwesome5
-                  name="bell"
+                  name="home"
                   size={20}
-                  color={focused ? "#8e7aea" : "gray"}
+                  color={focused ? "#8e7aea" : "#e0e0e0"}
                 ></FontAwesome5>
               </View>
             ),
@@ -187,7 +187,7 @@ function TabNav() {
                 <FontAwesome5
                   name="th-large"
                   size={20}
-                  color={focused ? "#333333" : "gray"}
+                  color={focused ? "#333333" : "#e0e0e0"}
                 ></FontAwesome5>
               </View>
             ),
@@ -295,7 +295,7 @@ function TabNav() {
                 <FontAwesome5
                   name="user"
                   size={20}
-                  color={focused ? "#8e7aea" : "gray"}
+                  color={focused ? "#8e7aea" : "#e0e0e0"}
                 ></FontAwesome5>
               </View>
             ),

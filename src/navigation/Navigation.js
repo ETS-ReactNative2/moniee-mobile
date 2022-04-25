@@ -39,7 +39,6 @@ import LandingScreen from "../screens/LandingScreen";
 // end of app screens import
 
 // component import
-import SearchBar from "../components/SearchBar";
 
 import plus from "../assets/bottomtabnavigation/plus.png";
 
@@ -355,8 +354,8 @@ export default function Navigation() {
         <Stack.Screen name={screenNames.addbankdetails} component={AddBankDetailsScreen} />
         <Stack.Screen name={screenNames.setpin} component={SetPINScreen} />
         <Stack.Screen name={screenNames.register} component={RegisterScreen} />
-        {/* <Stack.Screen name={screenNames.requestmoney} component={RequestMoneyScreen} />
-        <Stack.Screen name={screenNames.sendmoney} component={SendMoneyScreen} /> */}
+        <Stack.Screen name={screenNames.requestmoney} component={RequestMoneyScreen} />
+        <Stack.Screen name={screenNames.sendmoney} component={SendMoneyScreen} />
         {/* <Stack.Screen name={screenNames.profile} component={ProfileSettingsScreen} /> */}
         {/* <Stack.Screen name={screenNames.dispatch} component={DispatchScreen} /> */}
 

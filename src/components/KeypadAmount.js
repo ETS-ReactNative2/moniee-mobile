@@ -37,16 +37,11 @@ const KeypadAmount = ({ onPress, navigation }) => {
                 alignSelf: 'center',
                 alignItems: 'center',
                 justifyContent: 'center',
-                // backgroundColor: '#fafafa', 
-                // width: '40%',
                 paddingVertical: 20,
                 borderRadius: 20,
-                // borderColor: '#f2f2f2',
-                // borderWidth: '1',
                 color: '#fafafa'
               }}>
               <Text style={{color: '#0c0c26', fontSize: 45, fontWeight: 'bold', alignItems: 'center', textAlign: 'center', alignContent: 'center', alignSelf: 'center'}}> <Text style={{fontSize: 20, fontWeight: 'bold', color: '#0c0c26', fontSize: 20 }}>NGN</Text> 0 </Text>
-              {/* <Text style={{color: '#0c0c26', fontSize: 45, fontWeight: 'bold'}}><Image source={require('../assets/icon/₦.png')} style={{width: 10, height: 15, marginTop: 20}} />NGN 0</Text> */}
             </View>
             <View
               style={{

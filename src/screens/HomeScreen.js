@@ -1,14 +1,11 @@
 import React, { useState, useContext } from "react";
 import { View, StyleSheet, Image, TouchableOpacity, SafeAreaView } from "react-native";
 import { Text, Button, Input } from "react-native-elements";
-// import { useNavigation } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
-// import { Context as AuthContext } from "../context/AuthContext";
 import { FontAwesome5 } from "@expo/vector-icons";
 // import NavLink from "../components/NavLink";
 import TextInput from "../components/TextInput";
 import KeypadAmount from "../components/KeypadAmount";
-// import Transfer from "../components/Transfer";
 import Icon from "react-native-vector-icons/Feather"
 
 const HomeScreen = ({ onPress, navigation }) => {
@@ -17,10 +14,7 @@ const HomeScreen = ({ onPress, navigation }) => {
     [4, 5, 6],
     [7, 8, 9],
   ];
-  
-  // const { state, signin, clearErrorMessage } = useContext(AuthContext);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+
   return (
     <View style={styles.container}>
       {/* <SafeAreaView>
@@ -40,7 +34,7 @@ const HomeScreen = ({ onPress, navigation }) => {
       <View style={{flexDirection: 'row', paddingHorizontal: 10, width: '75%', alignSelf: 'center', bottom: 15}}>
         <TouchableOpacity
           style={styles.buttonRequestStyle}
-          onPress={() => navigation.navigate("auth", { screen: "RequestMoneyScreen" })}
+          onPress={() => navigation.navigate("RequestMoneyScreen" )}
           // onPress={() => navigation.navigate("HomeScreen")}
         >
           <Text style={styles.buttonTextStyle}> Request </Text>

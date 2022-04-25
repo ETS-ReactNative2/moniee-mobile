@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
 import { useNavigation } from "@react-navigation/native";
-// import { Context as TweetContext } from "../context/TweetContext";
 
-import Tweet from "../components/Tweets";
-import Header from "../components/Header";
 import {
   View,
   FlatList,

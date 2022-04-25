@@ -23,7 +23,7 @@ const RequestMoneyScreen = ({ onPress, navigation }) => {
         </View>
         <View>
           <Text style={styles.title}>Request Money</Text>
-          <Text style={styles.title2}>Enter your phone number.</Text>
+          {/* <Text style={styles.title2}>Enter your phone number.</Text> */}
         </View>
       </SafeAreaView>
 
@@ -39,24 +39,13 @@ const RequestMoneyScreen = ({ onPress, navigation }) => {
         }}>
         <View
           style={{ bottom: 250, marginTopx: 20, }}>
-          <TextInput
-            // icon='user'
-            placeholder="Phone Number"
-            autoCapitalize="none"
-            label="Username"
-            value={username}
-            // onChangeText={username => setUsername(username)}
-            mode="outlined"
-            keyboardType="phone-pad"
-            fontSize={12}
-            style={{
-              // marginBottom: 10,
-              height: 45,
-              fontSize: 13,
-              width: '80%',
-            }}
-            activeOutlineColor="#252525"
-          />
+            <TouchableOpacity
+          style={styles.button2Style}
+          // onPress={() => navigation.navigate("auth", { screen: "OTPScreen" })}
+          onPress={() => navigation.navigate("EnterPINScreen")}
+        >
+          <Text style={styles.textButtonStyle}> Purpose of request </Text>
+        </TouchableOpacity>
         </View>
         <TouchableOpacity
           style={styles.buttonStyle}
@@ -80,7 +69,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "space-around",
-    margin: 20,
+    // margin: 20,
+    backgroundColor: '#ffffff'
   },
   title: {
     fontSize: 30,
@@ -115,12 +105,36 @@ const styles = StyleSheet.create({
     width: '90%',
     alignSelf: 'center',
   },
+  button2Style: {
+    // backgroundColor: '#00b14f',
+    backgroundColor: '#FAFAFA',
+    paddingHorizontal: 100,
+    bottom: 0,
+    position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 20,
+    borderRadius: 10,
+    // marginTop: 10,
+    width: '90%',
+    alignSelf: 'center',
+  },
   loginButtonStyle: {
     fontWeight: '400',
     fontSize: 15,
     color: 'white',
     textAlign: 'center',
     width: '120%'
+  },
+  textButtonStyle: {
+    fontWeight: '400',
+    fontSize: 15,
+    color: '#828282',
+    width: '100%',
+    // ridht: 20
+    // paddingHorizontal: 40
+    // textAlign: 'center',
+    // width: '120%'
   },
   errorMessage: {
     fontSize: 16,
@@ -136,6 +150,7 @@ const styles = StyleSheet.create({
   },
   header: {
     paddingVertical: 50,
+    paddingHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
